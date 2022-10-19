@@ -1,5 +1,2 @@
 __pycache__
 *.egg-info
-src/*
-LICENSE
-pyproject.toml
