@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "discrete_log"
-version = "0.1.0"
+version = "0.1.1"
 authors = [
   { name="Lucas Driscoll", email="lukerdriscoll@gmail.com" },
 ]
