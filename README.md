@@ -8,4 +8,4 @@ Just import the package and call the pohligH function with the base, the power, 
 I didn't implement a factorization for large integers in this library, because I don't hate myself quite that much. I recommend <a href="https://www.alpertron.com.ar/ECM.HTM">This factorization calculator</a>, which should handle any reasonable number you give it. The pohligh module comes with a get_factors function for parsing the output of this calculator. You just need to get the factorization in the right format by clicking the share button near the bottom.
 
 # Licensing
-This is an MIT license. Don't worry, I'm not going to sue you for using the project I did in a day. I promise. I have a License file if you really need it, for some reason.
+This is an MIT license. Don't worry, I'm not going to sue you for using the project I did in a day. I promise. I have a License file in the src branch if you really need it, for some reason.
