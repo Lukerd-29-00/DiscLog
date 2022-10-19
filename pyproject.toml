@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0",
+"egcd>=0.4"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "discrete_log"
+version = "0.1.0"
+authors = [
+  { name="Lucas Driscoll", email="lukerdriscoll@gmail.com" },
+]
+description = "A package used to solve discrete log problems in a multiplicative group modulo some integer."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
