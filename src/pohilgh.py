@@ -1,4 +1,7 @@
-"""Contians the pohligH function that is used to calculate a discrete logarithm. It is best used when the modulus is a smooth integer; that is, it has several small prime factors."""
+"""Contians the pohligH function that is used to calculate a discrete logarithm. It is best used when the modulus is a smooth integer; that is, it has several small prime factors.
+
+This module is intended to be used with a precomputed prime factorization of the totient of the modulus. I recommend Aplerton's integer factorization calculator.
+"""
 import math
 import typing
 import re
@@ -43,6 +46,14 @@ def pohligH(base: int, power: int, modulus,phiFactors: typing.Iterable[typing.Tu
 factorsRe = r"([0-9]+)(?:\^([0-9]+))?"
 
 def get_factors(factorsStr: str)->typing.Iterable[typing.Tuple[int,int]]:
+    """Uses a regex to extract the factors from a string in the format p^e, p^e... where the comma and space can be replaced with any non-numerical seperator.
+
+    Args:
+        factorsStr: the string being scanned for prime factors.
+    
+    Returns:
+        An iterator of tuples in the form (p, e) where the product of all p**e gives the integer being factored.
+    """
     try:
         return [(int(p), int(e or "1")) for p, e in re.findall(factorsRe,factorsStr)]
     except TypeError:
