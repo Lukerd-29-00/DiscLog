@@ -5,7 +5,7 @@ This module is intended to be used with a precomputed prime factorization of the
 import math
 import typing
 import re
-import primitives
+from . import primitives
 
 def pohligH(base: int, power: int, modulus,phiFactors: typing.Iterable[typing.Tuple[int, int]])->int:
     """Find the integer x in Z mod modulus where base^x = power mod modulus.
